@@ -96,7 +96,7 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                             express: app,
                             onInit: function (cms) { return __awaiter(void 0, void 0, void 0, function () {
                                 return __generator(this, function (_a) {
-                                    cms.logger.info("Admin URL ".concat(cms.getAdminURL()));
+                                    cms.logger.info("Admin URL: ".concat(cms.getAdminURL()));
                                     return [2 /*return*/];
                                 });
                             }); },
@@ -110,6 +110,7 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                             switch (_a.label) {
                                 case 0:
                                     payload.logger.info("Next.js is building for production");
+                                    payload.logger.info(path_1.default.join(__dirname, "../"));
                                     //@ts-expect-error
                                     return [4 /*yield*/, (0, build_1.default)(path_1.default.join(__dirname, "../"))];
                                 case 1:

@@ -40,6 +40,6 @@ exports.default = (0, config_1.buildConfig)({
         url: process.env.MONGODB_URL,
     }),
     typescript: {
-        outputFile: path_1.default.resolve(__dirname, "payload-type.ts"),
+        outputFile: path_1.default.resolve(__dirname, "/payload-types.ts"),
     },
 });
