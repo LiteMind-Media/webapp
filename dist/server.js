@@ -128,6 +128,16 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                     createContext: createContext,
                 }));
                 app.use(function (req, res) { return (0, next_utils_1.nextHandler)(req, res); });
+                app.get("/", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+                    return __generator(this, function (_a) {
+                        switch (_a.label) {
+                            case 0: return [4 /*yield*/, next_utils_1.nextApp.render(req, res, "/")];
+                            case 1:
+                                _a.sent();
+                                return [2 /*return*/];
+                        }
+                    });
+                }); });
                 next_utils_1.nextApp.prepare().then(function () {
                     payload.logger.info("Next.js started");
                     app.listen(PORT, function () { return __awaiter(void 0, void 0, void 0, function () {

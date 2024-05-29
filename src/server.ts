@@ -67,6 +67,10 @@ const start = async () => {
 
   app.use((req, res) => nextHandler(req, res));
 
+  app.get("/", async (req, res) => {
+    await nextApp.render(req, res, "/");
+  });
+
   nextApp.prepare().then(() => {
     payload.logger.info("Next.js started");
 
